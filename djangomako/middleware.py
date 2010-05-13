@@ -22,7 +22,11 @@ class MakoMiddleware(object):
         # Set all mako variables based on django settings
         global template_dirs, output_encoding, module_directory, encoding_errors
         directories      = getattr(settings, 'MAKO_TEMPLATE_DIRS', settings.TEMPLATE_DIRS)
-        module_directory = getattr(settings, 'MAKO_MODULE_DIR', tempfile.mkdtemp())
+
+        module_directory = getattr(settings, 'MAKO_MODULE_DIR', None)
+        if module_directory is None:
+            module_directory = tempfile.mkdtemp()
+
         output_encoding  = getattr(settings, 'MAKO_OUTPUT_ENCODING', 'utf-8')
         encoding_errors  = getattr(settings, 'MAKO_ENCODING_ERRORS', 'replace')
         
