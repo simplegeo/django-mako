@@ -1,3 +1,12 @@
+django-mako (0.1.4-1sg5) lucid; urgency=low
+
+  [ Jeremy Grosser ]
+  * Add pycompat
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Wed, 18 May 2011 22:52:35 +0000
+
 django-mako (0.1.4-1sg0) unstable; urgency=low
 
   * Initial release
