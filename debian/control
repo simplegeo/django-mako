@@ -1,0 +1,12 @@
+Source: django-mako
+Section: misc
+Priority: extra
+Maintainer: Jeremy Grosser <jeremy@synack.me>
+Build-Depends: cdbs, debhelper (>= 7), python-support, python-setuptools
+Standards-Version: 3.8.3
+Homepage: https://github.com/tuxdna/django-mako
+
+Package: python-django-mako
+Architecture: any
+Depends: ${python:Depends}, python-django, python-mako
+Description: Drop in replacement allowing the use of mako templates in django
